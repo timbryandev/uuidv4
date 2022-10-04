@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/timbryandev/uuidv4.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "Tim Bryan <hi@timbryan.dev> (https://timbryan.dev)",
   "main": "lib/index.js",
   "scripts": {
