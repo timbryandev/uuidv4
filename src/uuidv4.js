@@ -18,6 +18,4 @@ const generate = (quantity = 1) => {
     .map(uuidV4)
 }
 
-module.exports = {
-  generate
-}
+module.exports = generate
