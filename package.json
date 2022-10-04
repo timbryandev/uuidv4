@@ -1,0 +1,38 @@
+{
+  "name": "@timbryandev/uuidv4",
+  "version": "1.0.1",
+  "description": "Generate UUIDs to V4 spec",
+  "keywords": [
+    "uuid",
+    "v4",
+    "utilities"
+  ],
+  "homepage": "https://github.com/timbryandev/uuidv4#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timbryandev/uuidv4.git"
+  },
+  "license": "ISC",
+  "author": "Tim Bryan <hi@timbryan.dev> (https://timbryan.dev)",
+  "main": "index.js",
+  "scripts": {
+    "publish": "npm publish --access=public",
+    "js:lint": "standard",
+    "js:fix": "standard --fix",
+    "test": "jest --coverage",
+    "tdd": "jest --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/timbryandev/uuidv4/issues"
+  },
+  "dependencies": {
+    "jest": "^29.1.2",
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ]
+  }
+}
