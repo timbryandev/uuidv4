@@ -2,14 +2,16 @@
 
 Generate UUIDs to V4 spec
 
-- [NPM](https://www.npmjs.com/package/@timbryandev/uuidv4)
-- [GitHub](https://github.com/timbryandev/uuidv4)
+[![License](https://img.shields.io/github/license/timbryandev/uuidv4)](https://img.shields.io/github/license/timbryandev/uuidv4)
+
+- [NPM](https://www.npmjs.com/package/@timbryandev/uuidv4) [![npm version](https://img.shields.io/npm/v/@timbryandev/uuidv4)](https://img.shields.io/npm/v/@timbryandev/uuidv4)
+- [GitHub](https://github.com/timbryandev/uuidv4) [![GitHub version](https://img.shields.io/github/package-json/v/timbryandev/uuidv4)](https://img.shields.io/github/package-json/v/timbryandev/uuidv4)
 
 ## Makes use of
 
-- [Jest](https://jestjs.io/) for unit testing
-- [Standard](https://standardjs.com/) for code standards and linting
-- [Terser](https://terser.org/) for production build (minification, uglification, obfuscation ect)
+- [![Jest](https://img.shields.io/github/package-json/dependency-version/timbryandev/uuidv4/dev/jest/production)](https://jestjs.io/) for unit testing
+- [![Standard](https://img.shields.io/github/package-json/dependency-version/timbryandev/uuidv4/dev/standard/production)](https://standardjs.com/) for code standards and linting
+- [![Terser](https://img.shields.io/github/package-json/dependency-version/timbryandev/uuidv4/dev/terser/production)](https://terser.org/) for production build (minification, uglification, obfuscation ect)
 
 ## Prerequisites
 
