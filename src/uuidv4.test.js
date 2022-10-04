@@ -1,7 +1,9 @@
+const { generate } = require('../index.js')
+
 const specRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/
 
 describe('uuidV4', () => {
-  it('should return an array with a string by default', () => {
+  it.only('should return an array with a string by default', () => {
     const idsArray = generate()
 
     expect(Array.isArray(idsArray)).toBe(true)
