@@ -1,6 +1,6 @@
-const specTemplate = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+const uuidV4 = () => {
+  const specTemplate = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
 
-function uuidV4 () {
   return specTemplate.replace(/[xy]/g, templateChar => {
     const randomChar = (Math.random() * 16) | 0
     const value = templateChar === 'x' ? randomChar : (randomChar & 0x3) | 0x8
@@ -15,7 +15,7 @@ const generate = (quantity = 1) => {
 
   return Array(quantity)
     .fill(null)
-    .map(_ => uuidV4())
+    .map(uuidV4)
 }
 
 module.exports = {
