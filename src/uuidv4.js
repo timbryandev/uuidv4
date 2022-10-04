@@ -1,15 +1,19 @@
 const specTemplate = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
 
 function uuidV4 () {
-  return specTemplate.replace(/[xy]/g, c => {
-    const r = (Math.random() * 16) | 0
-    const v = c === 'x' ? r : (r & 0x3) | 0x8
-    return v.toString(16)
+  return specTemplate.replace(/[xy]/g, templateChar => {
+    const randomChar = (Math.random() * 16) | 0
+    const value = templateChar === 'x' ? randomChar : (randomChar & 0x3) | 0x8
+    return value.toString(16)
   })
 }
 
-const generate = (q = 1) => {
-  return Array(q)
+const generate = (quantity = 1) => {
+  if (isNaN(quantity) || quantity <= 0) {
+    throw new TypeError('Quantity must be a positive integer')
+  }
+
+  return Array(quantity)
     .fill(null)
     .map(_ => uuidV4())
 }
