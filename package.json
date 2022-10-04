@@ -14,7 +14,7 @@
   },
   "license": "ISC",
   "author": "Tim Bryan <hi@timbryan.dev> (https://timbryan.dev)",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "publish": "npm publish --access=public",
     "js:lint": "standard",
