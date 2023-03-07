@@ -32,7 +32,7 @@ const [id] = uuidV4() // [ '85e63d29-f36a-4780-aa8d-e5cb2e8d1ebd' ]
 - To get many ids, pass a quantity:
 
 ```javascript
-const ids = uuidV4() // ['3d848fe6-b692-4257-bcfd-ccd27370bd7e','52ac630a-87c8-4767-879a-6b5881af045f','dca27384-5a61-4899-b4a6-f82bf8d728ca']
+const ids = uuidV4(3) // ['3d848fe6-b692-4257-bcfd-ccd27370bd7e','52ac630a-87c8-4767-879a-6b5881af045f','dca27384-5a61-4899-b4a6-f82bf8d728ca']
 ```
 
 ## Development
