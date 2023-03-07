@@ -1,0 +1,48 @@
+name: publish-npm
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking out project
+        uses: actions/checkout@v2
+      - name: Use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+          registry-url: https://registry.npmjs.org/
+      - name: install
+        run: npm install --ignore-scripts
+      - name: 'Run linting'
+        run: npm run js:lint
+      - name: 'Run tests'
+        run: npm run test
+      - name: 'Bump the version'
+        run: npm version ${{inputs.version}} --no-git-tag-version
+      - name: 'Publish the packages'
+        run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Get new version
+        id: new-version
+        uses: martinbeentjes/npm-get-version-action@main
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: version ${{ steps.new-version.outputs.current-version}}
+          commit_user_name: timbryandev-deploybot
+          commit_user_email: deploybot@timbryan.dev
+          tagging_message: 'v${{ steps.new-version.outputs.current-version }}'
+          push_options: '--force'
