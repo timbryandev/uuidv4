@@ -35,7 +35,7 @@ jobs:
       - name: 'Publish the packages'
         run: npm run publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - name: Get new version
         id: new-version
         uses: martinbeentjes/npm-get-version-action@main
